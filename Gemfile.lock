@@ -62,7 +62,7 @@ GEM
     concurrent-ruby (1.0.5)
     erubi (1.6.0)
     execjs (2.7.0)
-    ez (1.5.0.4)
+    ez (1.5.0.5)
       hirb (~> 0.7)
     ffi (1.9.18)
     globalid (0.4.0)
