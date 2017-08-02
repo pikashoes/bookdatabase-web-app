@@ -13,6 +13,11 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
   </head>
+  <style>
+    .intro {
+      font: 15px arial, sans-serif;
+    }
+  </style>
 
   <body>
     <%= render 'layouts/navbar' %>
@@ -27,7 +32,11 @@
         <p><strong><%= flash[:alert] %></strong></p>
       </div>
     <% end %>
-    
+    <div class = "container">
+      <h4> Welcome to the Awesome Books Database! </h4>
+      <p class = "intro"> We are a community of people who love to read.<br>Feel free to browse the books, contribute your own books to the database, add your own reviews, and organize your book lists! </p>
+    </div>
+    <hr>
     <div class="container">
       <%= yield %>
     </div>

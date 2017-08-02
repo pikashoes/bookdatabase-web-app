@@ -37,3 +37,4 @@ What I want to add onto this milestone
 > If I have time, I may create another model and have it be "to-read" list, like a wish list. Currently, the only list the user can add to is their 'read' list. This would require a way to indicate which list to add to when the user clicks "Add to List" on the main index page.
 > Reviews should be added on the page immediately. Currently the added reviews don't show up. (Bug)
 > Edit any suggestions made my TAs / graders.
+> I can also add the CSS styles to an actual .css file and call it relatively (instead of adding it into the files themselves).
