@@ -1,0 +1,32 @@
+<div class="row">
+
+  <% @books.each do |b| %>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+
+      <% photo_url = b.photo_url %>
+      <% if photo_url.blank? %>
+      <%   photo_url = "http://via.placeholder.com/350x350?text=no+photo" %>
+      <% end %>
+
+      <%= link_to image_tag(photo_url),
+                  "/books/#{b.id}", alt: "Lightning Thief", class: 'img-responsive' %>
+
+      <div class="caption">
+        <h4><%= link_to b.title, "/books/#{b.id}" %></h4>
+        <p class="rating">&bigstar;&bigstar;&bigstar;&bigstar;&star;</p>
+        <p>6 reviews.</p>
+
+        <p>
+          Written By: <%= b.author %>
+        </p>
+        <p class="genre">Genre: <i><%= b.genre %></i></p>
+        <p><a href="#" class="btn btn-primary" role="button">Add to List</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+</div>

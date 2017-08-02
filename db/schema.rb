@@ -12,4 +12,40 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "books", force: :cascade do |t|
+    t.text "author"
+    t.text "photo_url"
+    t.text "genre"
+    t.text "title"
+    t.integer "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text "summary"
+    t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "book_id"
+    t.datetime "created_at"
+    t.index ["book_id"], name: "index_favorites_on_book_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "rating"
+    t.text "content"
+    t.datetime "created_at"
+    t.index ["book_id"], name: "index_reviews_on_book_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text "name"
+    t.text "email"
+    t.text "created_at"
+    t.text "updated_at"
+    t.text "password_digest"
+  end
+
 end

@@ -1,0 +1,51 @@
+<div class="page-header">
+  <h1>Edit Book</h1>
+</div>
+
+<% if  @book.errors.full_messages.any? %>
+  <ul class="text-danger">
+    <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="row">
+  <div class="col-sm-4">
+
+  <%= form_tag("/books/#{@book.id}", method: 'patch') do  %>
+
+    <div class="form-group">
+      <%= label_tag :title, "Book Title" %>
+      <%= text_field_tag :title, @book.title, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :photo_url, "Link to Image or Photo" %>
+      <%= text_field_tag :photo_url, @book.photo_url, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :author, "Author" %>
+      <%= number_field_tag :author, @book.author, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :genre, "Genre" %>
+      <%= text_field_tag :genre, @book.genre, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :summary, "Summary" %>
+      <%= text_area_tag :summary, @book.summary, class: 'form-control' %>
+    </div>
+
+
+    <%= submit_tag "Update Book", class: 'btn btn-success btn-lg'%>
+    or
+    <%= link_to "Cancel", "/books" %>
+
+  <% end %>
+
+  </div>
+</div>

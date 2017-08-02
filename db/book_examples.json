@@ -1,0 +1,28 @@
+[{
+  "title": "The Lightning Thief",
+  "author": "Rick Riordan",
+  "genre": "fantasy",
+  "photo_url": "http://www.newyorkcitytheatre.com/images/show/21493_show_portrait_large.jpg",
+  "summary" : "This book is an awesome book about some dude who steals lightning or something."
+},
+{
+  "title": "The Sea of Monsters",
+  "author": "Rick Riordan",
+  "genre": "fantasy",
+  "photo_url": "https://images.booksense.com/images/741/290/9780786290741.jpg",
+  "summary" : "This book is about THE NEVER BEFORE written about sea where a lot of people disappear cuz ya know, monsters."
+},
+{
+  "title": "Sophie's World : The Greek Philosophers",
+  "author": "Jostein Gaarder",
+  "genre": "fantasy",
+  "photo_url": "https://img1.od-cdn.com/ImageType-400/4847-1/0EA/C73/7C/%7B0EAC737C-C856-41D3-AED9-55B0992604BA%7DImg400.jpg",
+  "summary" : "This book is about some Greek philosophers who say really wise things."
+},
+{
+  "title": "Lucene in Action, Second Edition",
+  "author": "Michael McCandless",
+  "genre": "IT",
+  "photo_url": "http://image3.kangcom.com/2004/12/b_pic/200508230004.jpg",
+  "summary" : "This book is about something. I'm not even sure what."
+}]
