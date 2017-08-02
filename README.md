@@ -23,7 +23,7 @@
 ----------------------
 5. At least one completely RESTful resource.
 	DONE.
-	I demonstrate adding, deleting, patching, and getting with the books. You may also add and delete a user.
+	I demonstrate adding, deleting, patching, and getting with the books. You may also add and delete a user, and add and delete a review.
 
 6. Users can sign up, login, and logout.
 	DONE.
