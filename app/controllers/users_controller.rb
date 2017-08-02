@@ -13,11 +13,12 @@ class UsersController < ApplicationController
   end
 
   def index
+    redirect_to root_url
   end
 
   def show
     @user = User.find_by(id: params["id"])
-    
+
     if @user.present? && @user.id == session["user_id"]
       @favorites = @user.favorites
     else

@@ -38,7 +38,7 @@ class BooksController < ApplicationController
     @book.photo_url = params["photo_url"]
     @book.summary = params["summary"]
     if @book.save
-      redirect_to "/books/#{b.id}", notice: "Book successfully updated."
+      redirect_to "/books/#{@book.id}", notice: "Book successfully updated."
     else
       render "edit"
     end
