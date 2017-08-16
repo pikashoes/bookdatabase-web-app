@@ -1,40 +1,30 @@
-10 POINTS: (all done)
-----------------------
-1. Started from the starting-point repository.
-	DONE
+I have completed everything below.
 
-2. Named your repository mpcs52553-final.
-	DONE
+20 points:
+===================
+(1 pt) Started from the starting-point repository
+	> Done.
+(1 pt) Named your repository mpcs52553-final
+	> Done
+(1 pt) "/help" should show your complete list of user stories and business rules
+	> Done
 
-3. Resonably complete domain model.
-	DONE. I have the following models:
-		User
-		Book
-		Review
-		Favorite
+Proper use of MVC
+(6 pts) Complete domain model: domain-related logic, low-level database queries (find_by, where, etc.), validations, etc.
+	> Done. I use several low-level database queries, such as in my books_controller. I also have completed domain-related logic and, as suggested in my last feedback, added validations for all models.
+(6 pts) Controllers respond to user input, prepare data for views, implement authorization rules as needed, etc.
+	> Done. Controllers respond to all user input, and I have it preparing data for views. I show error messages when something fails and redirect to correct URLs once it fails or succeeds.
+(5 pts) Views are primarily responsible for the user interface, implement authorization rules as needed, and contain no direct database queries
+	> Done. In particular, a VISITOR cannot create a new review, but a USER can create a new review. The views are different based on authorization (form is visible for user but not for visitor.) Similarly, a VISITOR cannot delete a book, but a USER can. The link for "Delete this book" redirects to different URLs based on authorization.
 
-4. Resonably complete model validations.
-	DONE.
-	The User has to have a name and email address.
-		> Note: Currently, if you try to Sign Up with an invalid user (i.e. no name or email address), it says that it was sucessful in the web page, but in the actual User database, that person is not added and cannot sign in with empty email addresses/passwords/names.
-	The Book has to have all of the parameters filled out except the image URL. If successful, the page will redirect to the main page and display a notice indicating that it is successful. If it doesn't meet the validations, there is currently no notice or error, but it returns to the same "new book" page and does not modify the database at all.
+10 points:
+===================
+(4 pts) At least one completely RESTful resource
+	> Done. Added multiple.
+(3 pts) Users can securely sign up, login, and logout
+	> Done. Users cannot access other users and password is secure.
+(3 pts) Good use of Bootstrap or custom CSS for reasonable appearance
+	> Done.
 
-10 POINTS (all done):
-----------------------
-5. At least one completely RESTful resource.
-	DONE.
-	I demonstrate adding, deleting, patching, and getting with the books. You may also add and delete a user, and add and delete a review.
 
-6. Users can sign up, login, and logout.
-	DONE.
-
-7. Good use of Bootstrap or custom CSS for reasonable appearance.
-	DONE. I used the navbar from the example shown in class and modified some CSS elements to ensure the pages looked reasonably OK.
-
-What I want to add onto this milestone
----------------------------------------
-> I want to give users the ability to add books to their list.
-> If I have time, I may create another model and have it be "to-read" list, like a wish list. Currently, the only list the user can add to is their 'read' list. This would require a way to indicate which list to add to when the user clicks "Add to List" on the main index page.
-> Reviews should be added on the page immediately. Currently the added reviews don't show up. (Bug)
-> Edit any suggestions made my TAs / graders.
-> I can also add the CSS styles to an actual .css file and call it relatively (instead of adding it into the files themselves).
+Thank you for the great course!

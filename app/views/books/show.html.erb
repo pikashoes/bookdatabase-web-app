@@ -1,8 +1,5 @@
 <div class="page-header">
   <h1><%= @book.title %>
-    <small class="rating">
-      &bigstar;&bigstar;&bigstar;&bigstar;&star;
-    </small>
   </h1>
   <p>Written By: <%= @book.author %>.</p>
   <p>
@@ -66,7 +63,7 @@
         <% review.rating.to_i.times do |n| %>
           &bigstar;
         <% end %>
-        <% 5 - review.rating.to_i.times do |n| %>
+        <% (5 - review.rating).to_i.times do |n| %>
           &star;
         <% end %>
       </p>
