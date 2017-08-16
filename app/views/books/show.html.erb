@@ -42,7 +42,7 @@
 
     <% if session["user_id"].present? %>
       <%= form_tag("/reviews", method: 'post') do %>
-        <% hidden_field_tag :book_id, @book.id %>
+        <%= hidden_field_tag :book_id, @book.id %>
         <h3>Add Your Review</h3>
         <p>
           <%= label_tag :rating %>

@@ -19,6 +19,7 @@ class BooksController < ApplicationController
     @book.author = params["author"]
     @book.genre = params["genre"]
     @book.summary = params["summary"]
+    @book.photo_url = params["photo_url"]
     if @book.save
       redirect_to "/books", notice: "Book successfully created."
     else
