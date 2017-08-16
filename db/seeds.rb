@@ -27,15 +27,6 @@ Book.all.each do |book|
   end
 end
 
-#Reset the Favorites table
-Favorite.delete_all
-User.all.each do |user|
-  rand(1..2).times do
-    Favorite.create user_id: user.id, book_id: Book.sample.id, created_at: rand(1...30).days.ago
-  end
-end
-
 puts "#{User.count} users."
 puts "#{Book.count} books."
 puts "#{Review.count} reviews."
-puts "#{Favorite.count} favorites."

@@ -11,7 +11,7 @@ Book
 Review
   book_id: integer
   rating: integer
-  content: text_field_tag
+  content: text
   created_at: datetime
 
 User
@@ -20,11 +20,6 @@ User
   password_digest: text
   created_at: text
   updated_at: text
-
-Favorite
-  user_id: integer
-  book_id: integer
-  created_at: datetime
 
 # This file allows you to specify your domain model
 # in .yml format.  Use `rails db:migrate` to apply your

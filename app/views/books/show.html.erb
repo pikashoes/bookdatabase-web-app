@@ -9,7 +9,13 @@
 
     <%= link_to "Edit This Book", "/books/#{@book.id}/edit" %>
     |
-    <%= link_to "Delete This Book", "/books/#{@book.id}", method: 'delete', data: { confirm: "Are you SURE?" } %>
+
+    <% if session["user_id"].present? %>
+      <%= link_to "Delete This Book", "/books/#{@book.id}", method: 'delete', data: { confirm: "Are you SURE?" } %>
+    <% else %>
+      <%= link_to "Delete This Book", '/sessions/new', data: { confirm: "You must sign in to delete books." }%>
+    <% end %>
+
   </p>
 </div>
 
@@ -32,6 +38,7 @@
     <p>
       <%= @book.summary %>
     </p>
+    <hr>
 
     <% if session["user_id"].present? %>
       <%= form_tag("/reviews", method: 'post') do %>
@@ -54,7 +61,6 @@
   <div class="col-sm-12">
 
     <h3> Reviews </h3>
-
     <% @reviews.each do |review| %>
       <p>
         <% review.rating.to_i.times do |n| %>

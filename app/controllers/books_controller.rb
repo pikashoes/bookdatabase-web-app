@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params['id'])
-    @reviews = Review.where(book_id: @book_id)
+    @reviews = Review.where(book_id: @book.id)
   end
 
   def new
@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to "/books", notice: "Book successfully created."
     else
-      render "new"
+      redirect_to "/books/new", notice: "Book was not created - please complete form fully."
     end
   end
 
@@ -40,7 +40,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to "/books/#{@book.id}", notice: "Book successfully updated."
     else
-      render "edit"
+      render "edit", notice: "Book was not updated - please complete form fully."
     end
   end
 
